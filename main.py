@@ -6,6 +6,7 @@ import time
 import io
 import csv
 from datetime import datetime
+import os
 
 import httpx
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, InputFile, Update
@@ -16,7 +17,7 @@ from telegram.ext import (
 
 
 # ====== CONFIG (مقادیر خودت را اینجا قرار بده) ======
-BOT_TOKEN = "8305045668:AAEr88lQ5o3rhEkUsCLgP3O1anr3C1TqhbA"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 SUPABASE_URL = "https://alvvqmbaiqpcbqjoqnuc.supabase.co"   # بدون /rest/v1
 SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFsdnZxbWJhaXFwY2Jxam9xbnVjIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MTEzODIyNSwiZXhwIjoyMDc2NzE0MjI1fQ.GFtrzD8aV3WXRM5Rl8mKIqshA0BJxWgn63GFq_nI8Ws"
 # ====================================================
